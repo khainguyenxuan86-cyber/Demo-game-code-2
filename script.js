@@ -387,49 +387,88 @@ RESET QUESTION
 
 function resetQuestion() {
 
-selectedAnswer =
-null;
+  selectedAnswer =
+    null;
 
-selectedWords =
-[];
+  selectedWords =
+    [];
 
-choicesContainer.innerHTML =
-"";
 
-wordBank.innerHTML =
-"";
+  choicesContainer.innerHTML =
+    "";
 
-sentenceArea.innerHTML =
-"";
+  wordBank.innerHTML =
+    "";
 
-writingAnswer.value =
-"";
+  sentenceArea.innerHTML =
+    "";
 
-feedback.textContent =
-"";
+  writingAnswer.value =
+    "";
 
-feedback.className =
-"";
 
-checkBtn.classList.remove(
-"hidden"
-);
+  feedback.textContent =
+    "";
 
-nextBtn.classList.add(
-"hidden"
-);
+  feedback.className =
+    "";
 
-choicesContainer.classList.add(
-"hidden"
-);
 
-unscrambleContainer.classList.add(
-"hidden"
-);
+  /*
+  RESET CHECK BUTTON
+  */
 
-writingContainer.classList.add(
-"hidden"
-);
+  checkBtn.classList.remove(
+    "hidden"
+  );
+
+  checkBtn.disabled =
+    false;
+
+
+  /*
+  RESET NEXT BUTTON
+  */
+
+  nextBtn.classList.add(
+    "hidden"
+  );
+
+  nextBtn.disabled =
+    false;
+
+
+  /*
+  RESET UNSCRAMBLE BUTTON
+  */
+
+  clearUnscramble.disabled =
+    false;
+
+
+  /*
+  RESET WRITING
+  */
+
+  writingAnswer.disabled =
+    false;
+
+
+  /*
+  HIDE QUESTION TYPES
+  */
+
+  choicesContainer.classList.add(
+    "hidden"
+  );
+
+  unscrambleContainer.classList.add(
+    "hidden"
+  );
+
+  writingContainer.classList.add(
+    "hidden"
+  );
 
 }
 
@@ -912,41 +951,65 @@ FINISH QUESTION
 
 function finishQuestion() {
 
-checkBtn.classList.add(
-"hidden"
-);
+  checkBtn.classList.add(
+    "hidden"
+  );
 
-nextBtn.classList.remove(
-"hidden"
-);
-
-const buttons =
-document.querySelectorAll(
-"button"
-);
-
-buttons.forEach(
-button => {
-
-  if (
-    button !==
-    nextBtn
-  ) {
+  nextBtn.classList.remove(
+    "hidden"
+  );
 
 
-    button.disabled =
-      true;
+  /*
+  DISABLE MULTIPLE CHOICE
+  */
+
+  const choiceButtons =
+    document.querySelectorAll(
+      ".choice-btn"
+    );
+
+  choiceButtons.forEach(
+    button => {
+
+      button.disabled =
+        true;
+
+    }
+  );
 
 
-  }
+  /*
+  DISABLE UNSCRAMBLE
+  */
 
+  const wordButtons =
+    document.querySelectorAll(
+      ".word-btn"
+    );
+
+  wordButtons.forEach(
+    button => {
+
+      button.disabled =
+        true;
+
+    }
+  );
+
+
+  clearUnscramble.disabled =
+    true;
+
+
+  /*
+  DISABLE WRITING
+  */
+
+  writingAnswer.disabled =
+    true;
 
 }
-
-);
-
-}
-
 /*
 NEXT QUESTION
 
