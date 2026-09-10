@@ -996,7 +996,7 @@ questions.length
 ) * 100;
 
 progress.style.width =
-${percentage}%;
+percentage + "%";
 
 }
 
