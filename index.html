@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en"> <head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+
+
+
+<title>English Learning Game</title>
+
+<link rel="stylesheet" href="style.css" >
+
+</head>
+
+<body>
+
+<div class="game-container">
+
+<!-- HEADER -->
+
+<header class="game-header">
+
+  <h1>🎮 English Challenge</h1>
+
+  <div class="score-board">
+
+    <span>
+      Score:
+      <strong id="score">0</strong>
+    </span>
+
+    <span>
+      Question:
+      <strong id="question-number">1</strong>
+      /
+      <strong id="total-questions">0</strong>
+    </span>
+
+  </div>
+
+</header>
+
+
+<!-- PROGRESS BAR -->
+
+<div class="progress-container">
+
+  <div class="progress-bar">
+
+    <div id="progress"></div>
+
+  </div>
+
+</div>
+
+
+<!-- QUESTION CARD -->
+
+<main class="question-card">
+
+
+  <!-- QUESTION TYPE -->
+
+  <div
+    id="question-type"
+    class="question-type"
+  >
+    MULTIPLE CHOICE
+  </div>
+
+
+  <!-- QUESTION -->
+
+  <h2 id="question-text">
+    Loading question...
+  </h2>
+
+
+  <!-- QUESTION IMAGE -->
+
+  <div
+    id="question-image-container"
+    class="hidden"
+  >
+
+    <img
+      id="question-image"
+      src=""
+      alt="Question image"
+    >
+
+  </div>
+
+
+  <!-- GAME AREA -->
+
+  <div id="game-area">
+
+
+    <!-- MULTIPLE CHOICE -->
+
+    <div
+      id="choices-container"
+      class="hidden"
+    ></div>
+
+
+    <!-- UNSCRAMBLE -->
+
+    <div
+      id="unscramble-container"
+      class="hidden"
+    >
+
+      <!-- WORD BANK -->
+
+      <div
+        class="word-bank"
+        id="word-bank"
+      ></div>
+
+
+      <!-- ANSWER AREA -->
+
+      <div class="answer-area">
+
+        <p>Your sentence:</p>
+
+        <div
+          id="sentence-area"
+        ></div>
+
+      </div>
+
+
+      <!-- CLEAR BUTTON -->
+
+      <button
+        id="clear-unscramble"
+        class="secondary-btn"
+      >
+        Clear
+      </button>
+
+    </div>
+
+
+    <!-- WRITING -->
+
+    <div
+      id="writing-container"
+      class="hidden"
+    >
+
+      <textarea
+        id="writing-answer"
+        placeholder="Write your answer here..."
+      ></textarea>
+
+
+      <p class="writing-note">
+        Write at least one complete sentence.
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- FEEDBACK -->
+
+  <div id="feedback"></div>
+
+
+  <!-- BUTTONS -->
+
+  <div class="button-container">
+
+
+    <button
+      id="check-btn"
+      class="check-btn"
+    >
+      Check Answer
+    </button>
+
+
+    <button
+      id="next-btn"
+      class="next-btn hidden"
+    >
+      Next Question →
+    </button>
+
+
+  </div>
+
+
+</main>
+
+
+<!-- RESULT SCREEN -->
+
+<div
+  id="result-screen"
+  class="result-screen hidden"
+>
+
+  <h2>🎉 Game Completed!</h2>
+
+  <p>Your final score:</p>
+
+
+  <div class="final-score">
+
+    <span id="final-score">
+      0
+    </span>
+
+    /
+
+    <span id="final-total">
+      0
+    </span>
+
+  </div>
+
+
+  <button id="restart-btn">
+    🔄 Play Again
+  </button>
+
+
+</div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script src="questions.js"></script>
+
+<script src="script.js"></script>
+
+</body> </html>
