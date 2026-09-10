@@ -859,7 +859,7 @@ correctAnswer
 ) {
 
 showFeedback(
-❌ Not quite! Correct answer: ${correctAnswer},
+`❌ Not quite! Correct answer: ${correctAnswer}`,
 false
 );
 
