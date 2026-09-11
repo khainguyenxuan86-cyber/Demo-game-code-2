@@ -26,6 +26,24 @@ answer: "Cat"
 {
 type: "multipleChoice",
 
+question: "What animal is this?",
+
+image: "images/dog.png",
+
+choices: [
+  "Dog",
+  "Cat",
+  "Bird",
+  "Fish"
+],
+
+answer: "Dog"
+
+},
+
+{
+type: "multipleChoice",
+
 question: "What is the past tense of 'go'?",
 
 choices: [
